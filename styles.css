@@ -59,21 +59,27 @@ img {
     margin-left: 0;
 }
 #page-content>div {
-    padding-left: 3em;}
-
+    padding-left: 3em;
+}
 #header {
     margin-top: 4em;
     margin-right: 15em;
-    margin-bottom: 4em;
+    margin-bottom: 1em;
 }
 #form-container {
     background-color: white;
     margin-left: 0;
-
+    box-shadow:
+    0 1px 1px hsl(0deg 0% 0% / 0.075),
+    0 2px 2px hsl(0deg 0% 0% / 0.075),
+    0 4px 4px hsl(0deg 0% 0% / 0.075),
+    0 8px 8px hsl(0deg 0% 0% / 0.075),
+    0 16px 16px hsl(0deg 0% 0% / 0.075);
+    border-top: 1px solid var(--light-gray-border);
 }
 form {
     display: flex;
-    padding: 1em;
+    
 }
 input, label {
     display: block;
@@ -82,10 +88,57 @@ label {
     font-size: .5em;
 }
 input {
-
+    width: 20rem;
+    height: 1.5rem;
+    border: 1px solid var(--light-gray-border);
+    border-radius: 3px;
+    margin-top: 5px;
 }
+input:invalid {
+    border: 1px solid red;
+}
+input:focus {
+    border: 1px solid rgb(0, 102, 255);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
 ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+    padding: 0px;
+}
+li {
+    margin: 1rem;
+}
+button {
+    width: 20em;
+    height: 4em;
+    margin-top: 3em;
+    border: none;
+    background-color: var(--dark-green);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    box-shadow:
+      0 1px 1px hsl(0deg 0% 0% / 0.075),
+      0 2px 2px hsl(0deg 0% 0% / 0.075),
+      0 4px 4px hsl(0deg 0% 0% / 0.075),
+      0 8px 8px hsl(0deg 0% 0% / 0.075),
+      0 16px 16px hsl(0deg 0% 0% / 0.075)
+}
+button:hover {
+    background-color: #82a068;
+    cursor: pointer;
+}
+#button-container>p {
+    font-size: 0.75em;
+}
+#button-container>p>a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+#button-container>p>a:hover {
+    color: #82a068;
 }
